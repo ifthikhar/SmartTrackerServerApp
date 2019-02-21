@@ -1,7 +1,7 @@
-package com.mwsgateway.apigateway.api;
+package com.apigateway.api;
 
-import com.mwsgateway.apigateway.api.viewmodel.FeedbackViewModel;
-import com.mwsgateway.apigateway.mail.FeedbackSender;
+import com.apigateway.mail.FeedbackSender;
+import com.apigateway.api.viewmodel.FeedbackViewModel;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 

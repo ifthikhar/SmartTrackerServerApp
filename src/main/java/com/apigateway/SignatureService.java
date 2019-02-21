@@ -1,6 +1,5 @@
-package com.mwsgateway.apigateway;
+package com.apigateway;
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;

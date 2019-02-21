@@ -1,9 +1,9 @@
-package com.mwsgateway.apigateway.api;
+package com.apigateway.api;
 
-import com.mwsgateway.apigateway.Mapper;
-import com.mwsgateway.apigateway.api.viewmodel.NotebookViewModel;
-import com.mwsgateway.apigateway.db.NotebookRepository;
-import com.mwsgateway.apigateway.model.Notebook;
+import com.apigateway.api.viewmodel.NotebookViewModel;
+import com.apigateway.Mapper;
+import com.apigateway.db.NotebookRepository;
+import com.apigateway.model.Notebook;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 

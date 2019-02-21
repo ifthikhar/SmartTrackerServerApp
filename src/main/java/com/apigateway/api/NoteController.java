@@ -1,12 +1,11 @@
-package com.mwsgateway.apigateway.api;
+package com.apigateway.api;
 
-import com.mwsgateway.apigateway.Mapper;
-import com.mwsgateway.apigateway.api.viewmodel.NoteViewModel;
-import com.mwsgateway.apigateway.db.NoteRepository;
-import com.mwsgateway.apigateway.db.NotebookRepository;
-import com.mwsgateway.apigateway.model.Note;
-import com.mwsgateway.apigateway.model.Notebook;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.apigateway.model.Notebook;
+import com.apigateway.Mapper;
+import com.apigateway.api.viewmodel.NoteViewModel;
+import com.apigateway.db.NoteRepository;
+import com.apigateway.db.NotebookRepository;
+import com.apigateway.model.Note;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 

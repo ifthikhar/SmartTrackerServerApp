@@ -1,4 +1,4 @@
-package com.mwsgateway.apigateway.api.viewmodel;
+package com.apigateway.api.viewmodel;
 
 import javax.validation.constraints.NotNull;
 

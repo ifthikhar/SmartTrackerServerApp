@@ -1,12 +1,12 @@
-package com.mwsgateway.apigateway;
+package com.apigateway;
 
-import com.mwsgateway.apigateway.api.viewmodel.NoteViewModel;
-import com.mwsgateway.apigateway.api.viewmodel.NotebookViewModel;
-import com.mwsgateway.apigateway.api.viewmodel.UserViewModel;
-import com.mwsgateway.apigateway.db.NotebookRepository;
-import com.mwsgateway.apigateway.model.Note;
-import com.mwsgateway.apigateway.model.Notebook;
-import com.mwsgateway.apigateway.model.User;
+import com.apigateway.api.viewmodel.NoteViewModel;
+import com.apigateway.api.viewmodel.NotebookViewModel;
+import com.apigateway.api.viewmodel.UserViewModel;
+import com.apigateway.db.NotebookRepository;
+import com.apigateway.model.Notebook;
+import com.apigateway.model.User;
+import com.apigateway.model.Note;
 import org.springframework.stereotype.Component;
 
 

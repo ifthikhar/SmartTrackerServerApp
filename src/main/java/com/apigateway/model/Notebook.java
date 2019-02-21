@@ -1,4 +1,4 @@
-package com.mwsgateway.apigateway.model;
+package com.apigateway.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.mongodb.core.mapping.Document;

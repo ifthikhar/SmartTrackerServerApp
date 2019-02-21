@@ -1,7 +1,7 @@
-package com.mwsgateway.apigateway.db;
+package com.apigateway.db;
 
-import com.mwsgateway.apigateway.model.Note;
-import com.mwsgateway.apigateway.model.Notebook;
+import com.apigateway.model.Notebook;
+import com.apigateway.model.Note;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,11 +1,9 @@
-package com.mwsgateway.apigateway.db;
+package com.apigateway.db;
 
-import com.mwsgateway.apigateway.model.Note;
-import com.mwsgateway.apigateway.model.Notebook;
-import com.mwsgateway.apigateway.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.apigateway.model.User;
+import com.apigateway.model.Note;
+import com.apigateway.model.Notebook;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 

@@ -1,4 +1,4 @@
-package com.mwsgateway.apigateway.mail;
+package com.apigateway.mail;
 
 import org.springframework.core.env.Environment;
 import org.springframework.mail.SimpleMailMessage;

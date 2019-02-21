@@ -1,14 +1,13 @@
-package com.mwsgateway.apigateway.api;
+package com.apigateway.api;
 
-import com.mwsgateway.apigateway.Mapper;
-import com.mwsgateway.apigateway.api.viewmodel.UserViewModel;
-import com.mwsgateway.apigateway.db.UserRepository;
-import com.mwsgateway.apigateway.model.User;
+import com.apigateway.Mapper;
+import com.apigateway.api.viewmodel.UserViewModel;
+import com.apigateway.db.UserRepository;
+import com.apigateway.model.User;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.ValidationException;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/login")
