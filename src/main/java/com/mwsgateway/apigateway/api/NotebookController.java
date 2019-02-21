@@ -4,7 +4,6 @@ import com.mwsgateway.apigateway.Mapper;
 import com.mwsgateway.apigateway.api.viewmodel.NotebookViewModel;
 import com.mwsgateway.apigateway.db.NotebookRepository;
 import com.mwsgateway.apigateway.model.Notebook;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +15,6 @@ import java.util.UUID;
 Requests can be tested using the built in HTTP Rest Client. Use the
 examples found in 'noteit.http' file.
  */
-
 @RestController
 @RequestMapping("/api/notebooks")
 @CrossOrigin

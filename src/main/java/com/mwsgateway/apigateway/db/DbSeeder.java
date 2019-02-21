@@ -2,6 +2,7 @@ package com.mwsgateway.apigateway.db;
 
 import com.mwsgateway.apigateway.model.Note;
 import com.mwsgateway.apigateway.model.Notebook;
+import com.mwsgateway.apigateway.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -22,10 +23,13 @@ public class DbSeeder implements CommandLineRunner {
 
     private NoteRepository noteRepository;
 
+    private UserRepository userRepository;
+
     public DbSeeder(NotebookRepository notebookRepository,
-                    NoteRepository noteRepository) {
+                    NoteRepository noteRepository, UserRepository userRepository) {
         this.notebookRepository = notebookRepository;
         this.noteRepository = noteRepository;
+        this.userRepository=userRepository;
     }
 
 
@@ -50,6 +54,12 @@ public class DbSeeder implements CommandLineRunner {
         // Save a quote note
         Note quoteNote = new Note("Latin Quote", "Carpe Diem", quotesNotebook);
         this.noteRepository.save(quoteNote);
+
+        // save the default user information
+        this.userRepository.deleteAll();
+        User user = new User("md","@gmail.com","111");
+        this.userRepository.save(user);
+
 
         System.out.println("Initialized database");
     }

@@ -2,9 +2,11 @@ package com.mwsgateway.apigateway;
 
 import com.mwsgateway.apigateway.api.viewmodel.NoteViewModel;
 import com.mwsgateway.apigateway.api.viewmodel.NotebookViewModel;
+import com.mwsgateway.apigateway.api.viewmodel.UserViewModel;
 import com.mwsgateway.apigateway.db.NotebookRepository;
 import com.mwsgateway.apigateway.model.Note;
 import com.mwsgateway.apigateway.model.Notebook;
+import com.mwsgateway.apigateway.model.User;
 import org.springframework.stereotype.Component;
 
 
@@ -60,4 +62,11 @@ public class Mapper {
 
         return entity;
     }
+
+    public User convertToUserEntity(UserViewModel userViewModel) {
+        User userEntity = new User(userViewModel.getName(),userViewModel.getEmail(),userViewModel.getPassword());
+
+        return userEntity;
+    }
+
 }
