@@ -5,6 +5,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Component;
 
+import java.util.Properties;
+
 @Component
 public class FeedbackMailSender implements FeedbackSender {
     private JavaMailSenderImpl mailSender;
@@ -16,6 +18,9 @@ public class FeedbackMailSender implements FeedbackSender {
         mailSender.setPort(Integer.parseInt(environment.getProperty("spring.mail.port")));
         mailSender.setUsername(environment.getProperty("spring.mail.username"));
         mailSender.setPassword(environment.getProperty("spring.mail.password"));
+        Properties properties = new Properties();
+        properties.setProperty("mail.smtp.starttls.enable", "true");
+        mailSender.setJavaMailProperties(properties);
 
     }
 

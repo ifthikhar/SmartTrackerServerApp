@@ -1,17 +1,19 @@
 package com.mwsgateway.apigateway.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.UUID;
 
-@Entity
+@Document(collection = "Note")
 public class Note {
     @Id
     private UUID id;
     private String title;
     private String text;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+   // @ManyToOne(fetch = FetchType.LAZY)
     private Notebook notebook;
 
     private Date lastModifiedOn;

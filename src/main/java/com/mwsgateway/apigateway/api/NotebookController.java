@@ -4,6 +4,7 @@ import com.mwsgateway.apigateway.Mapper;
 import com.mwsgateway.apigateway.api.viewmodel.NotebookViewModel;
 import com.mwsgateway.apigateway.db.NotebookRepository;
 import com.mwsgateway.apigateway.model.Notebook;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,9 @@ examples found in 'noteit.http' file.
 @RequestMapping("/api/notebooks")
 @CrossOrigin
 public class NotebookController {
+
     private NotebookRepository notebookRepository;
+
     private Mapper mapper;
 
     public NotebookController(NotebookRepository notebookRepository, Mapper mapper) {

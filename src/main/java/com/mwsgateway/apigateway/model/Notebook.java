@@ -1,19 +1,20 @@
 package com.mwsgateway.apigateway.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
+@Document(collection = "Notebook")
 public class Notebook {
     @Id
     private UUID id;
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "notebook", cascade = CascadeType.ALL)
+   // @OneToMany(fetch = FetchType.LAZY, mappedBy = "notebook", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Note> notes;
 

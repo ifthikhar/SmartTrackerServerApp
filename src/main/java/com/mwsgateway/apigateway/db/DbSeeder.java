@@ -2,6 +2,7 @@ package com.mwsgateway.apigateway.db;
 
 import com.mwsgateway.apigateway.model.Note;
 import com.mwsgateway.apigateway.model.Notebook;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
@@ -14,9 +15,11 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-@ConditionalOnProperty(name = "noteit.db.recreate", havingValue = "true")
+//@ConditionalOnProperty(name = "noteit.db.recreate", havingValue = "true")
 public class DbSeeder implements CommandLineRunner {
+
     private NotebookRepository notebookRepository;
+
     private NoteRepository noteRepository;
 
     public DbSeeder(NotebookRepository notebookRepository,
