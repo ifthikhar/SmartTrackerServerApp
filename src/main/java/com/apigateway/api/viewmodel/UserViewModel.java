@@ -8,8 +8,12 @@ public class UserViewModel {
 
     private String id;
 
+
     @NotNull
-    private String name;
+    private String firstName;
+
+    @NotNull
+    private String lastName;
 
     @Email
     private  String email;
@@ -28,13 +32,7 @@ public class UserViewModel {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
@@ -60,6 +58,22 @@ public class UserViewModel {
         this.lastloggedOn = lastloggedOn;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
 
 }

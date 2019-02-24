@@ -55,7 +55,7 @@ public class DbSeeder implements CommandLineRunner {
 
         // save the default user information
         this.userRepository.deleteAll();
-        User user = new User("md","@gmail.com","111");
+        User user = new User("ifthikhar","nasardeen","@gmail.com","111");
         this.userRepository.save(user);
 
 

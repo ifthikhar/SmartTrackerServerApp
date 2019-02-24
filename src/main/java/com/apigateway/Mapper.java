@@ -64,7 +64,7 @@ public class Mapper {
     }
 
     public User convertToUserEntity(UserViewModel userViewModel) {
-        User userEntity = new User(userViewModel.getName(),userViewModel.getEmail(),userViewModel.getPassword());
+        User userEntity = new User(userViewModel.getFirstName(),userViewModel.getLastName(),userViewModel.getEmail(),userViewModel.getPassword());
 
         return userEntity;
     }

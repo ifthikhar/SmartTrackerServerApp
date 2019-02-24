@@ -39,11 +39,18 @@ public class LoginController {
     }
 
 
-    @GetMapping("/saveUsers")
+    @GetMapping("/allUsers")
     public List<User> all() {
 
         return (List<User>) this.userRepository.findAll();
     }
+
+    @GetMapping("/checkUsers")
+    public List<User> check() {
+
+        return (List<User>) this.userRepository.findAll();
+    }
+
 
 
 

@@ -10,7 +10,10 @@ public class User {
     private UUID id;
 
 
-    private String name;
+    private String firstName;
+
+
+    private String lastName;
 
 
     private String email;
@@ -27,9 +30,10 @@ public class User {
     }
 
 
-    public User(String name, String email, String password) {
+    public User(String firstName,String lastName,  String email, String password) {
         this();
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName= lastName;
         this.email = email;
         this.password = password;
 
@@ -49,8 +53,15 @@ public class User {
         return password;
     }
 
-    public String getName() {
-        return name;
+
+
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
 }
