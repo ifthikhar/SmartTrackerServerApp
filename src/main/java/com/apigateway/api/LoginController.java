@@ -10,7 +10,7 @@ import javax.validation.ValidationException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/login")
+@RequestMapping("/api/register")
 @CrossOrigin
 public class LoginController {
 
@@ -45,7 +45,7 @@ public class LoginController {
         return (List<User>) this.userRepository.findAll();
     }
 
-    @GetMapping("/checkUsers")
+    @GetMapping("/checkLogin")
     public List<User> check() {
 
         return (List<User>) this.userRepository.findAll();
