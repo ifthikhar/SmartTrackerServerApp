@@ -45,10 +45,38 @@ public class LoginController {
         return (List<User>) this.userRepository.findAll();
     }
 
-    @GetMapping("/checkLogin")
-    public List<User> check() {
+    @PostMapping("/checkLogin")
+    public Boolean check(@RequestBody UserViewModel userViewModel,
+                            BindingResult bindingResult) {
+        System.out.println("In to the method for checking the login");
+        Boolean isLogin = null;
+        if (bindingResult.hasErrors()) {
+            throw new ValidationException();
+        }
 
-        return (List<User>) this.userRepository.findAll();
+        User usersEntity = this.mapper.convertToUserEntity(userViewModel);
+
+        List<User> users= (List<User>) this.userRepository.findAll();
+        System.out.println("total number of users in DB"+ users.size());
+        for(User u:users)
+        {
+           System.out.println("DB ---> the email address is " + u.getEmail() + "password is" + u.getPassword());
+            System.out.println("REQUEST  ---> the email address is " + usersEntity.getEmail() + "password is" + usersEntity.getPassword());
+            if(u.getEmail().equals(usersEntity.getEmail())&& u.getPassword().equals(usersEntity.getPassword()))
+            {
+                isLogin=true;
+
+            }
+
+            else
+            {
+                isLogin=false;
+
+            }
+
+        }
+
+        return isLogin;
     }
 
 
