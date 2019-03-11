@@ -17,8 +17,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 /*
-Requests can be tested using the built in HTTP Rest Client. Use the
-examples found in 'noteit.http' file.
+Requests can be tested using the built in HTTP Rest Client.
  */
 
 @RestController
@@ -40,7 +39,6 @@ public class NoteController {
     @GetMapping("/all")
     public List<NoteViewModel> all() {
         List<Note> notes = this.noteRepository.findAll();
-
         // map from entity to view model
         List<NoteViewModel> list = new ArrayList<>();
         for (Note note : notes) {
@@ -88,9 +86,6 @@ public class NoteController {
             NoteViewModel noteViewModel = this.mapper.convertToNoteViewModel(note);
             notelist.add(noteViewModel);
         }
-
-
-
         return notelist;
     }
 

@@ -18,20 +18,26 @@ public class FeedbackMailSender implements FeedbackSender {
         mailSender.setPort(Integer.parseInt(environment.getProperty("spring.mail.port")));
         mailSender.setUsername(environment.getProperty("spring.mail.username"));
         mailSender.setPassword(environment.getProperty("spring.mail.password"));
+
         Properties properties = new Properties();
-        properties.setProperty("mail.smtp.starttls.enable", "true");
+
+        properties.setProperty("mail.smtp.starttls.enable","true");properties.setProperty("mail.smtp.auth", "true");
+        properties.setProperty("mail.smtp.starttls.required", "true");
+
         mailSender.setJavaMailProperties(properties);
 
     }
 
     @Override
     public void sendFeedback(String from, String name, String feedback){
+        System.out.println("Setting all the parameters for mail");
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("nayarrahul8@gmail.com.com");
+        message.setTo("nayarrahul8@gmail.com");
         message.setSubject("New feedback from " + name);
         message.setText(feedback);
         message.setFrom(from);
-
         this.mailSender.send(message);
+
+
     }
 }

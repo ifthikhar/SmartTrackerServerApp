@@ -29,9 +29,13 @@ public class FeedbackController {
             throw new ValidationException("Feedback has errors; Can not send feedback;");
         }
 
+
+        System.out.println("The name is "+ feedbackViewModel.getName() +"the email is "+ feedbackViewModel.getEmail());
         this.feedbackSender.sendFeedback(
                 feedbackViewModel.getEmail(),
                 feedbackViewModel.getName(),
                 feedbackViewModel.getFeedback());
+
+
     }
 }
